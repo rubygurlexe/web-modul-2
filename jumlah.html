@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>PENJUMLAHAN BILANGAN</h1>
+    <p>
+      Bilangan Pertama:
+      <input
+        type="number"
+        id="bilangan1"
+        placeholder="Enter your first number..."
+      />
+    </p>
+    <p>
+      Bilangan Kedua:
+      <input
+        type="number"
+        id="bilangan2"
+        placeholder="Enter your second number..."
+      />
+    </p>
+
+    <p>
+      <button onclick="submit()">Jumlah</button>
+      <button onclick="ulang()">Ulang</button>
+    </p>
+
+    <script>
+        function submit() {
+          var bilangan_pertama = parseFloat(
+            document.getElementById("bilangan1").value
+          );
+          var bilangan_kedua = parseFloat(document.getElementById("bilangan2").value);
+
+          var result = bilangan_pertama + bilangan_kedua;
+
+          if (result) {
+              alert("Hasil Penjumlahan : " + result);
+          } else if(isNaN(bilangan_kedua) || isNaN(bilangan_pertama)) {
+              alert("Please fill the valid number");
+          }
+      }
+
+      function ulang() {
+            var bilangan_pertama = parseInt(
+              document.getElementById("bilangan1").value
+            ) = ""
+            var bilangan_kedua = parseInt(document.getElementById("bilangan2").value) = ""
+
+        }
+    </script>
+  </body>
+</html>
